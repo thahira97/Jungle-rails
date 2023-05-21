@@ -17,5 +17,10 @@ RSpec.describe Product, type: :model do
       @product = @category.products.new(quantity: 4)
       expect(@product.quantity).to eq(4)
     end
+    it 'should have a category' do
+      @category = Category.new(name: "Trees")
+      @product = @category.products.new
+      expect(@product.category.name).to eq("Trees")
+    end
   end
 end
