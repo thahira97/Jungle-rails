@@ -12,5 +12,10 @@ RSpec.describe Product, type: :model do
       @product = @category.products.new(price: Money.new(120))
       expect(@product.price).to eq(Money.new(120))
     end
+    it 'should have a quantity' do
+      @category = Category.new
+      @product = @category.products.new(quantity: 4)
+      expect(@product.quantity).to eq(4)
+    end
   end
 end
