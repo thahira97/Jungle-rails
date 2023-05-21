@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 
     validate :validate_names
     validate :validate_names
-    validates :email, presence: true, uniqueness: true
+    validates :email, presence: true, uniqueness: { case_sensitive: false }
     validates :password, confirmation: true
     validates :password_confirmation, presence: true
     
