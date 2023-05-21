@@ -70,6 +70,16 @@ RSpec.describe User, type: :model do
       )
       expect(user.save).to be false
     end
+    it "password should have a minimum length of 4" do
+      user = User.new(
+        first_name: 'Thahira',
+        last_name: 'Sheerin',
+        email: "lhl.14cohort@lhl.com",
+        password: 'pa',
+        password_confirmation: 'pa'
+      )
+      expect(user.save).to be false
+    end
   end
 
 end
