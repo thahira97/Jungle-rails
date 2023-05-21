@@ -103,6 +103,15 @@ RSpec.describe User, type: :model do
       user = User.authenticate_with_credentials('john@example.com', 'pass')
       expect(user).to eq(nil)
     end
+    it 'should return the user instance if email has whitespaces' do
+      user = User.authenticate_with_credentials('  john@example.com  ', 'password')
+      expect(user).to eq(@user)
+    end
+
+    it 'should return the user instance if email has different casing' do
+      user = User.authenticate_with_credentials('JoHn@ExAmPlE.CoM', 'password')
+      expect(user).to eq(@user)
+    end
   end
 
 end
