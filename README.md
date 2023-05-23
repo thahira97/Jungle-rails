@@ -5,9 +5,12 @@ A mini e-commerce application built with Rails 6.1 for purposes of teaching Rail
 # Homepage
 ![Homepage gif](/docs/Screen%20Recording%202023-05-23%20at%206.55.13%20PM.gif)
 
-User could browse through the products and select the products on any categories that they wished to do.The  product will be added to the cart.The cart will show the total amount to be paid. In cart, you can increment or decrement the products.
+User could browse through the products and select the products on any categories that they wished to do.The product will be added to the cart.
 
+# Cart-details
 ![Cart](/docs/Cart.png)
+
+The cart will show the total amount to be paid. In cart, you can increment or decrement the products.
 ## Setup
 
 1. Run `bundle install` to install dependencies
